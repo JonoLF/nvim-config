@@ -6,4 +6,6 @@ debug
 foo.*
 *.log
 data
-ctags
+tags
+tags.lock
+tags.temp
