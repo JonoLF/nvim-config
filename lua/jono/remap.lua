@@ -32,6 +32,18 @@ vim.keymap.set("n", "<leader>k", "<cmd>lnext<CR>zz")
 vim.keymap.set("n", "<leader>j", "<cmd>lprev<CR>zz")
 
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+-- create numbered list from visual selection
+vim.keymap.set("v", "<leader>nl", [[:s/^/\=line('.') - line("'<") + 1 . '. '/e<CR>]])
+-- remove numbered list from visual selection
+vim.keymap.set("v", "<leader>nd", [[:s/^\d./^/e<CR>]])
+-- create bulleted list from visual selection
+vim.keymap.set("v", "<leader>bl", [[:s/^/* /e<CR>]])
+-- delete bulleted list from visual selection
+vim.keymap.set("v", "<leader>bd", [[:s/^* /^/e<CR>]])
+-- put visual selection in code block
+
+--vim.keymap.set("v", "<leader>cb", [[:s/^/```<CR>]])
+
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.config/nvim/lua/jono/packer.lua<CR>");
@@ -39,4 +51,3 @@ vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.config/nvim/lua/jono/packer.lua<CR
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
-
