@@ -69,7 +69,6 @@ return require('packer').startup(function(use)
         branch = "harpoon2",
         requires = {
             {"nvim-lua/plenary.nvim"}, 
-            {"nvim-telescope/telescope.nvim"}
         }
     }
     use("theprimeagen/refactoring.nvim")
@@ -80,7 +79,17 @@ return require('packer').startup(function(use)
     use 'williamboman/mason-lspconfig.nvim'
     use 'hrsh7th/nvim-cmp'
     use 'hrsh7th/cmp-nvim-lsp'
-
+    use({
+        "L3MON4D3/LuaSnip",
+        -- follow latest release.
+        tag = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+        -- install jsregexp (optional!:).
+        run = "make install_jsregexp"
+    })
+    use 'hrsh7th/cmp-buffer'
+    use 'hrsh7th/cmp-path'
+    use 'hrsh7th/cmp-nvim-lua'
+    
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v3.x',
@@ -105,12 +114,18 @@ return require('packer').startup(function(use)
 
     use("folke/zen-mode.nvim")
     use("github/copilot.vim")
-    use({
-        "L3MON4D3/LuaSnip",
-        -- follow latest release.
-        tag = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
-        -- install jsregexp (optional!:).
-        run = "make install_jsregexp"
-    })
+    use("tpope/vim-repeat")
+    use{
+        "ggandor/leap.nvim",
+        requires = {
+            {"tpope/vim-repeat"},
+        },
+        config = function()
+            require("leap")
+            vim.keymap.set({'n'}, '<leader>gs', '<Plug>(leap-from-window)')
+            vim.keymap.set({'n'}, '<leader>s', '<Plug>(leap-forward)')
+            vim.keymap.set({'n'}, '<leader>S', '<Plug>(leap-backward)')
+        end
+    }
 end)
 

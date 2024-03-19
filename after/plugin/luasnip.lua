@@ -32,8 +32,8 @@ vim.keymap.set({"i", "s"}, "<C-E>", function()
 end, {silent = true})
 
 local date_input = function(args, snip, old_state, fmt)
-	local fmt = fmt or "%Y-%m-%d"
-	return sn(nil, i(1, os.date(fmt)))
+	local fmt_local = fmt or "%Y-%m-%d"
+	return sn(nil, i(1, os.date(fmt_local)))
 end
 
 ls.add_snippets("c", {
@@ -87,6 +87,12 @@ ls.add_snippets("c", {
         i(1, "Brief description of the var"),
         t({""," */"}),
     }),
+    s("disprint", {
+        t({"printf(\"--------------------\\n\");", ""}),
+        t({"printf(\""}),
+        i(1, "user input"),
+        t({"\\n\");", "printf(\"--------------------\\n\");"})
+    }),
 }
 )
 
@@ -135,6 +141,12 @@ ls.add_snippets("cpp", {
         t({""," * @brief "}),
         i(1, "Brief description of the var"),
         t({""," */"}),
+    }),
+    s("disprint", {
+        t({"printf(\"--------------------\\n\");", ""}),
+        t({"printf(\""}),
+        i(1, "user input"),
+        t({"\\n\");", "printf(\"--------------------\\n\");"})
     }),
 }
 )
