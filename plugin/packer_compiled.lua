@@ -80,7 +80,11 @@ _G.packer_plugins = {
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
   catppuccin = {
+<<<<<<< HEAD
     config = { "\27LJ\2\n×\1\0\0\4\0\t\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\0016\0\6\0009\0\a\0'\2\b\0B\0\2\1K\0\1\0\27colorscheme catppuccin\bcmd\bvim\17integrations\1\0\5\bcmp\2\nmason\2\rmarkdown\2\15treesitter\2\fharpoon\2\1\0\2\27transparent_background\2\fflavour\nmocha\nsetup\15catppuccin\frequire\0" },
+=======
+    config = { "\27LJ\2\n×\1\0\0\4\0\t\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\0016\0\6\0009\0\a\0'\2\b\0B\0\2\1K\0\1\0\27colorscheme catppuccin\bcmd\bvim\17integrations\1\0\5\nmason\2\rmarkdown\2\fharpoon\2\15treesitter\2\bcmp\2\1\0\2\27transparent_background\2\fflavour\nmocha\nsetup\15catppuccin\frequire\0" },
+>>>>>>> 62397f9 (.)
     loaded = true,
     path = "/home/jono/.local/share/nvim/site/pack/packer/start/catppuccin",
     url = "https://github.com/catppuccin/nvim"
@@ -215,17 +219,30 @@ time([[Defining packer_plugins]], false)
 time([[Config for leap.nvim]], true)
 try_loadstring("\27LJ\2\nü\1\0\0\5\0\14\0\0256\0\0\0'\2\1\0B\0\2\0016\0\2\0009\0\3\0009\0\4\0005\2\5\0'\3\6\0'\4\a\0B\0\4\0016\0\2\0009\0\3\0009\0\4\0005\2\b\0'\3\t\0'\4\n\0B\0\4\0016\0\2\0009\0\3\0009\0\4\0005\2\v\0'\3\f\0'\4\r\0B\0\4\1K\0\1\0\26<Plug>(leap-backward)\14<leader>S\1\2\0\0\6n\25<Plug>(leap-forward)\14<leader>s\1\2\0\0\6n\29<Plug>(leap-from-window)\15<leader>gs\1\2\0\0\6n\bset\vkeymap\bvim\tleap\frequire\0", "config", "leap.nvim")
 time([[Config for leap.nvim]], false)
+<<<<<<< HEAD
 -- Config for: nvim-surround
 time([[Config for nvim-surround]], true)
 try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18nvim-surround\frequire\0", "config", "nvim-surround")
 time([[Config for nvim-surround]], false)
+=======
+>>>>>>> 62397f9 (.)
 -- Config for: trouble.nvim
 time([[Config for trouble.nvim]], true)
 try_loadstring("\27LJ\2\nC\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\nicons\1\nsetup\ftrouble\frequire\0", "config", "trouble.nvim")
 time([[Config for trouble.nvim]], false)
+<<<<<<< HEAD
 -- Config for: catppuccin
 time([[Config for catppuccin]], true)
 try_loadstring("\27LJ\2\n×\1\0\0\4\0\t\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\0016\0\6\0009\0\a\0'\2\b\0B\0\2\1K\0\1\0\27colorscheme catppuccin\bcmd\bvim\17integrations\1\0\5\bcmp\2\nmason\2\rmarkdown\2\15treesitter\2\fharpoon\2\1\0\2\27transparent_background\2\fflavour\nmocha\nsetup\15catppuccin\frequire\0", "config", "catppuccin")
+=======
+-- Config for: nvim-surround
+time([[Config for nvim-surround]], true)
+try_loadstring("\27LJ\2\n?\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\18nvim-surround\frequire\0", "config", "nvim-surround")
+time([[Config for nvim-surround]], false)
+-- Config for: catppuccin
+time([[Config for catppuccin]], true)
+try_loadstring("\27LJ\2\n×\1\0\0\4\0\t\0\r6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0005\3\4\0=\3\5\2B\0\2\0016\0\6\0009\0\a\0'\2\b\0B\0\2\1K\0\1\0\27colorscheme catppuccin\bcmd\bvim\17integrations\1\0\5\nmason\2\rmarkdown\2\fharpoon\2\15treesitter\2\bcmp\2\1\0\2\27transparent_background\2\fflavour\nmocha\nsetup\15catppuccin\frequire\0", "config", "catppuccin")
+>>>>>>> 62397f9 (.)
 time([[Config for catppuccin]], false)
 
 _G._packer.inside_compile = false
