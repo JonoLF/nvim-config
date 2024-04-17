@@ -54,5 +54,7 @@ end)
 
 --vim.keymap.set("n", ":W", ":w<CR>" , {noremap = true, silent = true})
 vim.cmd('command W w')
+vim.keymap.set("n", "<leader>o", "o<Esc>", { silent = true })
+vim.keymap.set("n", "<leader>O", "O<Esc>", { silent = true })
 -- Copilot stuff
 vim.keymap.set("n", "<leader>cp", "<cmd>Copilot panel<CR>")
