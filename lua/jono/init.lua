@@ -24,5 +24,4 @@ vim.api.nvim_create_autocmd('User', { pattern = 'LeapLeave',
   }
 )
 
-vim.api.nvim_create_autocmd({ 'BufEnter' }, { pattern = '*', command = "Copilot disable" })
 
