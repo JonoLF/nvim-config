@@ -113,7 +113,6 @@ return require('packer').startup(function(use)
     }
 
     use("folke/zen-mode.nvim")
-    use("github/copilot.vim")
     use("tpope/vim-repeat")
     use{
         "ggandor/leap.nvim",
