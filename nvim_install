@@ -8,6 +8,10 @@ if [ $? -ne 0 ]; then
     trap 'echo "\"${last_command}\" command had an exit code $?."' EXIT
 fi
 
+if [ -d ~/neovim ]; then
+    rm -rf ~/neovim
+fi
+
 # install prerequisites
 sudo apt-get install -y ninja-build gettext cmake unzip curl
 
