@@ -24,4 +24,4 @@ vim.api.nvim_create_autocmd('User', { pattern = 'LeapLeave',
   }
 )
 
-
+vim.o.clipboard = 'unnamedplus'
