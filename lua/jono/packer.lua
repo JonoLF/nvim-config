@@ -113,18 +113,18 @@ return require('packer').startup(function(use)
 
     use("folke/zen-mode.nvim")
     use("tpope/vim-repeat")
-    use{
-        "ggandor/leap.nvim",
-        requires = {
-            {"tpope/vim-repeat"},
-        },
-        config = function()
-            require("leap")
-            vim.keymap.set({'n'}, '<leader>gs', '<Plug>(leap-from-window)')
-            vim.keymap.set({'n'}, '<leader>s', '<Plug>(leap-forward)')
-            vim.keymap.set({'n'}, '<leader>S', '<Plug>(leap-backward)')
-        end
-    }
+    --use{
+    --    "ggandor/leap.nvim",
+    --    requires = {
+    --        {"tpope/vim-repeat"},
+    --    },
+    --    config = function()
+    --        require("leap")
+    --        vim.keymap.set({'n'}, '<leader>gs', '<Plug>(leap-from-window)')
+    --        vim.keymap.set({'n'}, '<leader>s', '<Plug>(leap-forward)')
+    --        vim.keymap.set({'n'}, '<leader>S', '<Plug>(leap-backward)')
+    --    end
+    --}
     use({
         "kylechui/nvim-surround",
         -- tag = "*", -- Use for stability; omit to use `main` branch for the latest features

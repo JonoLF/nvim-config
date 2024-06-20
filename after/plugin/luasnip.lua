@@ -45,6 +45,12 @@ ls.add_snippets("all", {
         i(2,"if code"),
         t({"","}"}),
     }),
+    s("else", {
+        t({"else {"}),
+        t({"","\t"}),
+        i(1,"else code"),
+        t({"","}"}),
+    }),
     s("ifelse", {
         t({"if ("}),
         i(1,"conditions"),
@@ -258,6 +264,14 @@ ls.add_snippets("javascript", {
     }),
     s(".then", {
         t({".then(("}),
+        i(1,"value"),
+        t({") => {"}),
+        t({"","\t"}),
+        i(2, "code"),
+        t({"","})"}),
+    }),
+    s(".athen", {
+        t({".then(async("}),
         i(1,"value"),
         t({") => {"}),
         t({"","\t"}),
