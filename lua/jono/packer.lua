@@ -25,19 +25,70 @@ return require('packer').startup(function(use)
         'nvim-telescope/telescope.nvim', tag = '0.1.x',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
+    use {
+        "nvim-telescope/telescope-file-browser.nvim",
+        requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
+    }
     use({
         "catppuccin/nvim",
         as = "catppuccin",
         config = function()
             require("catppuccin").setup({
                 flavour = "mocha",
-                transparent_background = true,
+                background = {
+                    dark = "mocha",
+                },
+                no_italic = false,
+                no_bold = false,
+                no_underline = false,
+                styles = {
+                    comments = {"italic"},
+                    conditionals = {},
+                    loops = {},
+                    functions = {},
+                    keywords = {},
+                    strings = {},
+                    variables = {},
+                    numbers = {},
+                    booleans = {},
+                    properties = {},
+                    types = {},
+                    operators = {},
+                },
+                default_integrations = false,
                 integrations = {
                     treesitter = true,
+                    treesitter_context = true,
+                    telescope = {
+                        enabled = true,
+                    },
                     harpoon = true,
                     markdown = true,
                     mason = true,
                     cmp = true,
+                    mason = true,
+                    native_lsp = {
+                        enabled = true,
+                        virtual_text = {
+                            errors = { "italic" },
+                            hints = { "italic" },
+                            warnings = { "italic" },
+                            information = { "italic" },
+                            ok = { "italic" },
+                        },
+                        underlines = {
+                            errors = { "underline" },
+                            hints = { "underline" },
+                            warnings = { "underline" },
+                            information = { "underline" },
+                            ok = { "underline" },
+                        },
+                        inlay_hints = {
+                            background = true,
+                        },
+                    },
+                    lsp_trouble = true,
+                    which_key = true,
                 },
             })
 
@@ -144,6 +195,18 @@ return require('packer').startup(function(use)
         event = "InsertEnter",
         config = function()
             require("nvim-autopairs").setup {}
+        end
+    }
+    use {
+        "folke/which-key.nvim",
+        config = function()
+            vim.o.timeout = true
+            vim.o.timeoutlen = 300
+            require("which-key").setup {
+                -- your configuration comes here
+                -- or leave it empty to use the default settings
+                -- refer to the configuration section below
+            }
         end
     }
 end)
