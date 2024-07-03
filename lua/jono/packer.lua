@@ -36,8 +36,11 @@ return require('packer').startup(function(use)
             require("catppuccin").setup({
                 flavour = "mocha",
                 background = {
+                    light = "mocha",
                     dark = "mocha",
                 },
+                transparent_background = false,
+                term_colors = true,
                 no_italic = false,
                 no_bold = false,
                 no_underline = false,
@@ -55,7 +58,7 @@ return require('packer').startup(function(use)
                     types = {},
                     operators = {},
                 },
-                default_integrations = false,
+                default_integrations = true,
                 integrations = {
                     treesitter = true,
                     treesitter_context = true,
@@ -89,10 +92,10 @@ return require('packer').startup(function(use)
                     },
                     lsp_trouble = true,
                     which_key = true,
+                    markdown = true,
+                    diffview = true,
                 },
             })
-
-            vim.cmd('colorscheme catppuccin')
         end
     })
     use({
