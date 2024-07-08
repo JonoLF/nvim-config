@@ -79,6 +79,14 @@ ls.add_snippets("all", {
         i(2,"catch code"),
         t({"","}"}),
     }),
+    s("while", {
+        t({"while ("}),
+        i(1,"condition"),
+        t({") {"}),
+        t({"","\t"}),
+        i(2,"code"),
+        t({"","}"}),
+    }),
 })
 ls.add_snippets("python", {
     s("elif", {
@@ -285,5 +293,16 @@ ls.add_snippets("javascript", {
         t({"","\t"}),
         i(2, "code"),
         t({"","});"}),
+    }),
+    s("fori", {
+        t({"for ("}),
+        i(1,"let i = 0"),
+        t({"; i "}),
+        i(2, "comparison"),
+        t({"; i++ "}),
+        t({") {"}),
+        t({"","\t"}),
+        i(3, "code"),
+        t({"","}"}),
     }),
 })
