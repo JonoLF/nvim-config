@@ -156,7 +156,14 @@ ls.add_snippets("c", {
         t({"\\n\");", "printf(\"--------------------\\n\");"})
     }),
 })
-ls.filetype_set("cpp", { "c" });
+ls.add_snippets("cpp", {
+    s("main", {
+        t({"int main(int argc, char* argv[]){"}),
+        t({"","\t"}),
+        i(1, "main code"),
+        t({"", "}"})
+    }),
+});
 ls.add_snippets("javascript", {
     s("fancycom", {
         t({"/****************************************", " * "}),
