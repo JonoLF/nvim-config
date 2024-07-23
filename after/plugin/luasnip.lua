@@ -155,6 +155,11 @@ ls.add_snippets("c", {
         i(1, "user input"),
         t({"\\n\");", "printf(\"--------------------\\n\");"})
     }),
+    s("fori", {
+        t({"for(uint8_t "}), i(1, "var"), t({" = "}), i(2, "init"), t({"; "}), i(3, "var"), t({" "}), i(4, " operator "), t({" "}), i(5, "limit"), t({"; "}), i(6, "var"), t({"++){"}),
+        t({"", "\t"}), i(7, "code"),
+        t({"", "}"})
+    })
 })
 ls.add_snippets("cpp", {
     s("main", {
@@ -163,6 +168,67 @@ ls.add_snippets("cpp", {
         i(1, "main code"),
         t({"", "}"})
     }),
+    s("fancycom", {
+        t({"/****************************************", " * "}),
+        i(1, "COMMENT TEXT"),
+        t({""," ****************************************/"}),
+    }),
+    s("multicom", {
+        t({"/*", " * "}),
+        i(1, "COMMENT TEXT"),
+        t({"", " */"}),
+    }),
+    s("doxyfile", {
+        t({"/**"}),
+        t({""," * @file "}),
+        t({""," * @brief "}),
+        i(1, "Brief description of the file"),
+        t({""," *"}),
+        t({""," * @author "}),
+        i(2, "Jonathan Faller"),
+        t({""," *"}),
+        t({""," * @date "}),
+        d(3, date_input, {}, { user_args = { "%A, %B %d of %Y" } }),
+        t({""," */"}),
+    }),
+    s("doxyfunc", {
+        t({"/**"}),
+        t({""," * @function "}),
+        t({""," * @brief "}),
+        i(1, "Brief description of the function"),
+        t({""," *"}),
+        t({""," * @param "}),
+        i(2, "PARAMS"),
+        t({""," *"}),
+        t({""," * @return "}),
+        i(3, "RETURNS"),
+        t({""," */"}),
+    }),
+    s("doxystruct", {
+        t({"/**"}),
+        t({""," * @struct "}),
+        t({""," * @brief "}),
+        i(1, "Brief description of the struct"),
+        t({""," */"}),
+    }),
+    s("doxyvar", {
+        t({"/**"}),
+        t({""," * @var "}),
+        t({""," * @brief "}),
+        i(1, "Brief description of the var"),
+        t({""," */"}),
+    }),
+    s("disprint", {
+        t({"printf(\"--------------------\\n\");", ""}),
+        t({"printf(\""}),
+        i(1, "user input"),
+        t({"\\n\");", "printf(\"--------------------\\n\");"})
+    }),
+    s("fori", {
+        t({"for(std::size_t "}), i(1, "var"), t({" = "}), i(2, "init"), t({"; "}), i(3, "var"), t({" "}), i(4, " operator "), t({" "}), i(5, "limit"), t({"; "}), i(6, "var"), t({"++){"}),
+        t({"", "\t"}), i(7, "code"),
+        t({"", "}"})
+    })
 });
 ls.add_snippets("javascript", {
     s("fancycom", {

@@ -69,7 +69,6 @@ return require('packer').startup(function(use)
                     markdown = true,
                     mason = true,
                     cmp = true,
-                    mason = true,
                     native_lsp = {
                         enabled = true,
                         virtual_text = {
@@ -92,7 +91,6 @@ return require('packer').startup(function(use)
                     },
                     lsp_trouble = true,
                     which_key = true,
-                    markdown = true,
                     diffview = true,
                 },
             })
