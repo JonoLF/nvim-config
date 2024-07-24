@@ -43,7 +43,6 @@ cmp.setup({
       ['<C-u>'] = cmp.mapping.scroll_docs(-4),
       ['<C-d>'] = cmp.mapping.scroll_docs(4),
       ['<C-y>'] = cmp.mapping.confirm({ select = true }),
-      ['<CR>'] = cmp.mapping.confirm({select = true}),
   }),
   formatting = cmp_format,
 })
