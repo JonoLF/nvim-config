@@ -37,6 +37,9 @@ local date_input = function(args, snip, old_state, fmt)
 end
 
 ls.add_snippets("all", {
+    s("date", {
+        d(1, date_input, {}, { user_args = { "%A, %B %d of %Y" } }),
+    }),
     s("if", {
         t({"if ("}),
         i(1,"conditions"),
