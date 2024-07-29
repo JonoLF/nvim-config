@@ -148,8 +148,9 @@ ls.add_snippets("c", {
     s("doxyvar", {
         t({"/**"}),
         t({""," * @var "}),
+        i(1, "name"),
         t({""," * @brief "}),
-        i(1, "Brief description of the var"),
+        i(2, "Brief description of the var"),
         t({""," */"}),
     }),
     s("disprint", {
@@ -217,8 +218,9 @@ ls.add_snippets("cpp", {
     s("doxyvar", {
         t({"/**"}),
         t({""," * @var "}),
+        i(1, "name"),
         t({""," * @brief "}),
-        i(1, "Brief description of the var"),
+        i(2, "Brief description of the var"),
         t({""," */"}),
     }),
     s("disprint", {
