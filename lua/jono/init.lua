@@ -29,5 +29,5 @@ vim.o.clipboard = 'unnamedplus'
 vim.cmd([[
   autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 ]])
-vim.o.autoindent = true
-vim.o.smartindent = true
+vim.o.autoindent = false
+vim.o.smartindent = false

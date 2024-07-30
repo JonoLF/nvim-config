@@ -56,4 +56,7 @@ end)
 vim.cmd('command W w')
 vim.keymap.set("n", "<leader>o", "o<Esc>", { silent = true })
 vim.keymap.set("n", "<leader>O", "O<Esc>", { silent = true })
-vim.keymap.set("x", "p", "P")
+vim.keymap.set("x", "p", '"_dP')  -- Deletes the selected text and pastes without affecting unnamed register
+vim.keymap.set("n", "p", '"_dP')  -- Deletes and pastes without affecting unnamed register
+vim.cmd([[nnoremap s "_s]])
+
