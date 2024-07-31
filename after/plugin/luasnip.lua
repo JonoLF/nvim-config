@@ -372,6 +372,8 @@ ls.add_snippets("javascript", {
     }),
     s(".catch", {
         t({".catch((error) => {"}),
+        t({"","\tconsole.error(error.name)"}),
+        t({"","\tconsole.error(error.message)"}),
         t({"","\tconsole.error(error.message)"}),
         t({"","});"}),
     }),
