@@ -93,11 +93,9 @@ ls.add_snippets("all", {
 })
 ls.add_snippets("sh", {
     s("errorhandling", {
-        t({"set -e"}),
+        t({"set -euo pipefail"}),
         t({"", "trap 'last_command=$current_command; current_command=$BASH_COMMAND' DEBUG"}),
-        t({"", "if [ $? -ne 0 ]; then"}),
-        t({"", "\ttrap 'echo \"\\\"${last_command}\\\" command had an exit code $?\"' EXIT"}),
-        t({"", "fi"})
+        t({"", "trap 'if [ $? -ne 0 ]; then echo \"\\\"${last_command}\\\" command had an exit code $?\"; fi'EXIT"}),
     })
 })
 ls.add_snippets("python", {
