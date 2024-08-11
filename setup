@@ -34,19 +34,3 @@ else
     echo "autoconf already installed"
     echo "-----------------------------------------"
 fi
-cd ~/.config/nvim
-if [ -d "ctags" ]; then
-    echo "-----------------------------------------"
-    echo "ctags already installed"
-    echo "-----------------------------------------"
-else
-    echo "-----------------------------------------"
-    echo "ctags not installed, installing..."
-    echo "-----------------------------------------"
-    gh repo clone universal-ctags/ctags
-    cd ctags
-    ./autogen.sh
-    ./configure
-    make -j 2>&1 | tee make.log
-    sudo make install
-fi
