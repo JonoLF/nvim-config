@@ -59,3 +59,5 @@ vim.keymap.set("n", "<leader>O", "O<Esc>", { silent = true })
 vim.keymap.set("x", "p", '"_dP')  -- Deletes the selected text and pastes without affecting unnamed register
 vim.keymap.set("x", "s", '"_s')  -- Use black hole register to avoid overwriting unnamed register
 
+-- create new tab
+vim.keymap.set("n", "<C-w>t", "<cmd>tabnew<CR>")
