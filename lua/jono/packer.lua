@@ -39,10 +39,10 @@ return require('packer').startup(function(use)
             }
         }
     }
-    use {
-        "nvim-telescope/telescope-file-browser.nvim",
-        requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
-    }
+    --use {
+    --    "nvim-telescope/telescope-file-browser.nvim",
+    --    requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
+    --}
     use({
         "catppuccin/nvim",
         as = "catppuccin",
@@ -236,5 +236,8 @@ return require('packer').startup(function(use)
         },
         config = true
     }
+    use({
+        "stevearc/oil.nvim",
+    })
 end)
 
