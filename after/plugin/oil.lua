@@ -1,3 +1,4 @@
+vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 require("oil").setup({
   -- Oil will take over directory buffers (e.g. `vim .` or `:e src/`)
   -- Set to false if you want some other plugin (e.g. netrw) to open when you edit directories.
@@ -6,7 +7,7 @@ require("oil").setup({
   -- See :help oil-columns
   columns = {
     "icon",
-    -- "permissions",
+    --"permissions",
     -- "size",
     -- "mtime",
   },
@@ -77,7 +78,7 @@ require("oil").setup({
   use_default_keymaps = true,
   view_options = {
     -- Show files and directories that start with "."
-    show_hidden = false,
+    show_hidden = true,
     -- This function defines what is considered a "hidden" file
     is_hidden_file = function(name, bufnr)
       return vim.startswith(name, ".")

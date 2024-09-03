@@ -236,6 +236,7 @@ return require('packer').startup(function(use)
         },
         config = true
     }
+    use{'echasnovski/mini.nvim', version=false}
     use({
         "stevearc/oil.nvim",
     })
