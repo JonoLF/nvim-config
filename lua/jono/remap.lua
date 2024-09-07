@@ -61,3 +61,16 @@ vim.keymap.set("x", "s", '"_s')  -- Use black hole register to avoid overwriting
 
 -- create new tab
 vim.keymap.set("n", "<C-w>t", "<cmd>tabnew<CR>")
+
+-- Remap all `c` commands to use the black hole register
+vim.keymap.set({'n', 'v'}, 'c', '"_c')    -- Normal and Visual modes for `c`
+-- No need to remap `cw` separately
+
+-- Remap `C` and `cc` separately, since they are individual commands
+vim.keymap.set('n', 'C', '"_C')           -- Normal mode for `C`
+vim.keymap.set('n', 'cc', '"_cc')         -- Normal mode for `cc`
+
+-- Remap all `s` commands to use the black hole register
+vim.keymap.set({'n', 'v'}, 's', '"_s')    -- Normal and Visual modes for `s`
+vim.keymap.set('n', 'S', '"_S')           -- Normal mode for `S`
+
