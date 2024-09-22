@@ -31,3 +31,6 @@ vim.o.clipboard = 'unnamedplus'
 --]])
 vim.o.autoindent = true
 vim.o.smartindent = true
+vim.o.cindent = true;
+-- modify cindent to stop c and cpp preprocessor directives from being autoaligned to the beginning of the line
+vim.opt.cinoptions = vim.opt.cinoptions - "p";
