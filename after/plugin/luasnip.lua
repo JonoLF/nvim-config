@@ -187,6 +187,11 @@ ls.add_snippets("cpp", {
         i(1, "COMMENT TEXT"),
         t({"", " */"}),
     }),
+    s("doxycom", {
+        t({"/**", " * "}),
+        i(1, "doxygen stuff"),
+        t({"", " */"}),
+    }),
     s("doxyfile", {
         t({"/**"}),
         t({""," * @file "}),
