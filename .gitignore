@@ -10,4 +10,4 @@ tags
 tags.lock
 tags.temp
 ctags
-packer/packer_compiled.lua
+packer_compiled.lua
