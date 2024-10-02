@@ -228,11 +228,25 @@ ls.add_snippets("cpp", {
         i(2, "Brief description of the var"),
         t({""," */"}),
     }),
-    s("disprint", {
-        t({"printf(\"--------------------\\n\");", ""}),
-        t({"printf(\""}),
-        i(1, "user input"),
-        t({"\\n\");", "printf(\"--------------------\\n\");"})
+    s("doxyclass", {
+        t({"/**"}),
+        t({""," * @class "}),
+        i(1, "name"),
+        t({""," * @brief "}),
+        i(2, "Brief description of the class"),
+        t({"", " *"}),
+        i(3, "More details about the class"),
+        t({""," */"}),
+    }),
+    s("doxyenum", {
+        t({"/**"}),
+        t({""," * @enum "}),
+        i(1, "name"),
+        t({""," * @brief "}),
+        i(2, "Brief description of the enum"),
+        t({"", " *"}),
+        i(3, "More details about the enum"),
+        t({""," */"}),
     }),
     s("fori", {
         t({"for (auto "}), i(1, "var"), t({" = "}), i(2, "init"), t({"; "}), i(3, "var"), t({" "}), i(4, " operator "), t({" "}), i(5, "limit"), t({"; "}), i(6, "var"), t({"++) {"}),
