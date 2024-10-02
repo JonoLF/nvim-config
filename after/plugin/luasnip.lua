@@ -203,14 +203,15 @@ ls.add_snippets("cpp", {
     s("doxyfunc", {
         t({"/**"}),
         t({""," * @function "}),
+        i(1, "Function signature"),
         t({""," * @brief "}),
-        i(1, "Brief description of the function"),
+        i(2, "Brief description of the function"),
         t({""," *"}),
         t({""," * @param "}),
-        i(2, "PARAMS"),
+        i(3, "PARAMS"),
         t({""," *"}),
         t({""," * @return "}),
-        i(3, "RETURNS"),
+        i(4, "RETURNS"),
         t({""," */"}),
     }),
     s("doxystruct", {
