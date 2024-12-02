@@ -93,7 +93,7 @@ ls.add_snippets("all", {
 })
 ls.add_snippets("sh", {
     s("errorhandling", {
-        t({"set -euo pipefail"}),
+        t({"set -eo pipefail"}),
     })
 })
 ls.add_snippets("python", {
