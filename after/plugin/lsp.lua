@@ -14,6 +14,8 @@ lsp_zero.on_attach(function(client, bufnr)
     vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, {buffer = bufnr})
     vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, {buffer = bufnr})
     vim.keymap.set('n', 'gr', '<cmd>Telescope lsp_references<cr>', {buffer = bufnr})
+    vim.keymap.set("n", "<leader>gd", function() vim.lsp.buf.definition() end, {buffer = bufnr})
+    vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, {buffer = bufnr})
 end)
 require('mason').setup({})
 require('mason-lspconfig').setup({
