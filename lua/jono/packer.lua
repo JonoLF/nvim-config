@@ -200,11 +200,7 @@ return require('packer').startup(function(use)
     }
     use "sindrets/diffview.nvim"
     use {
-        "windwp/nvim-autopairs",
-        event = "InsertEnter",
-        config = function()
-            require("nvim-autopairs").setup {}
-        end
+        "windwp/nvim-autopairs"
     }
     use {
         "folke/which-key.nvim",
