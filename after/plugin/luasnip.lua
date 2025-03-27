@@ -117,6 +117,11 @@ ls.add_snippets("c", {
         i(1, "COMMENT TEXT"),
         t({"", " */"}),
     }),
+    s("doxycom", {
+        t({"/**", " * "}),
+        i(1, "doxygen stuff"),
+        t({"", " */"}),
+    }),
     s("doxyfile", {
         t({"/**"}),
         t({""," * @file "}),
@@ -132,7 +137,6 @@ ls.add_snippets("c", {
     }),
     s("doxyfunc", {
         t({"/**"}),
-        t({""," * @function "}),
         t({""," * @brief "}),
         i(1, "Brief description of the function"),
         t({""," *"}),
@@ -143,32 +147,12 @@ ls.add_snippets("c", {
         i(3, "RETURNS"),
         t({""," */"}),
     }),
-    s("doxystruct", {
-        t({"/**"}),
-        t({""," * @struct "}),
-        t({""," * @brief "}),
-        i(1, "Brief description of the struct"),
-        t({""," */"}),
-    }),
-    s("doxyvar", {
-        t({"/**"}),
-        t({""," * @var "}),
-        i(1, "name"),
-        t({""," * @brief "}),
-        i(2, "Brief description of the var"),
-        t({""," */"}),
-    }),
     s("disprint", {
         t({"printf(\"--------------------\\n\");", ""}),
         t({"printf(\""}),
         i(1, "user input"),
         t({"\\n\");", "printf(\"--------------------\\n\");"})
     }),
-    s("fori", {
-        t({"for (uint8_t "}), i(1, "var"), t({" = "}), i(2, "init"), t({"; "}), i(3, "var"), t({" "}), i(4, " operator "), t({" "}), i(5, "limit"), t({"; "}), i(6, "var"), t({"++) {"}),
-        t({"", "\t"}), i(7, "code"),
-        t({"", "}"})
-    })
 })
 ls.add_snippets("cpp", {
     s("main", {
@@ -207,60 +191,16 @@ ls.add_snippets("cpp", {
     }),
     s("doxyfunc", {
         t({"/**"}),
-        t({""," * @function "}),
-        i(1, "Function signature"),
         t({""," * @brief "}),
-        i(2, "Brief description of the function"),
+        i(1, "Brief description of the function"),
         t({""," *"}),
         t({""," * @param "}),
-        i(3, "PARAMS"),
+        i(2, "PARAMS"),
         t({""," *"}),
         t({""," * @return "}),
-        i(4, "RETURNS"),
+        i(3, "RETURNS"),
         t({""," */"}),
     }),
-    s("doxystruct", {
-        t({"/**"}),
-        t({""," * @struct "}),
-        t({""," * @brief "}),
-        i(1, "Brief description of the struct"),
-        t({""," */"}),
-    }),
-    s("doxyvar", {
-        t({"/**"}),
-        t({""," * @var "}),
-        i(1, "name"),
-        t({""," * @brief "}),
-        i(2, "Brief description of the var"),
-        t({""," */"}),
-    }),
-    s("doxyclass", {
-        t({"/**"}),
-        t({""," * @class "}),
-        i(1, "name"),
-        t({""," * @brief "}),
-        i(2, "Brief description of the class"),
-        t({"", " *"}),
-        t({"", " * "}),
-        i(3, "More details about the class"),
-        t({""," */"}),
-    }),
-    s("doxyenum", {
-        t({"/**"}),
-        t({""," * @enum "}),
-        i(1, "name"),
-        t({""," * @brief "}),
-        i(2, "Brief description of the enum"),
-        t({"", " *"}),
-        t({"", " * "}),
-        i(3, "More details about the enum"),
-        t({""," */"}),
-    }),
-    s("fori", {
-        t({"for (auto "}), i(1, "var"), t({" = "}), i(2, "init"), t({"; "}), i(3, "var"), t({" "}), i(4, " operator "), t({" "}), i(5, "limit"), t({"; "}), i(6, "var"), t({"++) {"}),
-        t({"", "\t"}), i(7, "code"),
-        t({"", "}"})
-    })
 });
 ls.add_snippets("javascript", {
     s("fancycom", {
