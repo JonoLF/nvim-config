@@ -201,6 +201,12 @@ ls.add_snippets("cpp", {
         i(3, "RETURNS"),
         t({""," */"}),
     }),
+    s("disprint", {
+        t({"printf(\"--------------------\\n\");", ""}),
+        t({"printf(\""}),
+        i(1, "user input"),
+        t({"\\n\");", "printf(\"--------------------\\n\");"})
+    }),
 });
 ls.add_snippets("javascript", {
     s("fancycom", {
