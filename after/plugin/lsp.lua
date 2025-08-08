@@ -17,10 +17,11 @@ lsp_zero.on_attach(function(client, bufnr)
     vim.keymap.set("n", "<leader>gd", function() vim.lsp.buf.definition() end, {buffer = bufnr})
     vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, {buffer = bufnr})
 
-    -- Enable clangd formatting
-    if client.name == "clangd" then
-        client.server_capabilities.documentFormattingProvider = true
-    end
+    -- -- Enable clangd formatting
+    -- if client.name == "clangd" then
+    --     -- client.server_capabilities.documentFormattingProvider = true
+    --     client.server_capabilities.documentFormattingProvider = false
+    -- end
 end)
 require('mason').setup({})
 require('mason-lspconfig').setup({
@@ -84,7 +85,8 @@ vim.diagnostic.config({
 
 -- Configure clangd LSP server
 lspconfig.clangd.setup({
-    cmd = {"clangd", "--background-index", "--clang-tidy"}, -- Ensures clangd uses clang-tidy for linting and formatting
+    cmd = {"clangd", "--background-index", "--clang-tidy"},
+    -- cmd = {"clangd", "--background-index"},
     on_attach = function(client, bufnr)
         -- Enable clangd formatting
         if client.name == "clangd" then

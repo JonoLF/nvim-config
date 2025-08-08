@@ -29,8 +29,17 @@ vim.o.clipboard = 'unnamedplus'
 --vim.cmd([[
 --  autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 --]])
-vim.o.autoindent = true
-vim.o.smartindent = true
-vim.o.cindent = true;
+-- vim.o.autoindent = true
+-- vim.o.smartindent = false
+-- vim.o.cindent = false;
 -- modify cindent to stop c and cpp preprocessor directives from being autoaligned to the beginning of the line
-vim.opt.cinoptions = vim.opt.cinoptions - "p";
+-- vim.opt.cinoptions = vim.opt.cinoptions - "p";
+vim.api.nvim_create_autocmd("BufEnter", {
+  pattern = "*",
+  callback = function()
+    vim.opt.autoindent = true
+    vim.opt.smartindent = true
+    vim.opt.cindent = true
+  end,
+})
+
