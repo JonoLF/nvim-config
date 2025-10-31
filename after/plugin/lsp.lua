@@ -1,5 +1,6 @@
 local lsp_zero = require('lsp-zero')
-local lspconfig = require('lspconfig')
+local ok, lspconfig = pcall(require, "lspconfig")
+if not ok then return end
 lsp_zero.preset("recommended")
 lsp_zero.on_attach(function(client, bufnr)
     -- see :help lsp_zero-zero-keybindings
@@ -86,9 +87,7 @@ vim.diagnostic.config({
 -- Configure clangd LSP server
 lspconfig.clangd.setup({
     cmd = {"clangd", "--background-index", "--clang-tidy"},
-    -- cmd = {"clangd", "--background-index"},
     on_attach = function(client, bufnr)
-        -- Enable clangd formatting
         if client.name == "clangd" then
             client.server_capabilities.documentFormattingProvider = true
         end

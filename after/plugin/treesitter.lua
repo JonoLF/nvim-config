@@ -1,5 +1,5 @@
 require'nvim-treesitter.configs'.setup {
-    ensure_installed = {"c", "lua", "cpp", "bash", "matlab"},
+    ensure_installed = {"c", "lua", "cpp", "bash", "python"},
     sync_install = false,
     auto_install = true,
     highlight = {

@@ -23,6 +23,7 @@ return require('packer').startup(function(use)
     use "nvim-lua/plenary.nvim"
     use{
         'nvim-treesitter/nvim-treesitter',
+        branch = 'main',
         run = function()
             local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
             ts_update()
@@ -236,5 +237,27 @@ return require('packer').startup(function(use)
     use({
         "stevearc/oil.nvim",
     })
+    use {
+        'lervag/vimtex',
+        -- -- set plugin globals before plugin loads to avoid config race.
+        -- setup = function()
+        --     -- compiler and viewer defaults (change to your environment)
+        --     vim.g.vimtex_compiler_method = 'pdflatex'
+        --     vim.g.vimtex_view_method = 'zathura'      -- linux example
+        --     -- other useful globals
+        --     vim.g.vimtex_quickfix_mode = 0
+        --     vim.g.vimtex_compiler_pdflatex = {
+        --         build_dir = '',
+        --         options = { '-interaction=nonstopmode', '-synctex=1' }
+        --     }
+        -- end,
+        -- config = function()
+        --     -- optional: useful keymaps
+        --     local map = vim.api.nvim_set_keymap
+        --     map('n','<Leader>lc',':VyimtexCompile<CR>',{noremap=true,silent=true})
+        --     map('n','<Leader>lv',':VimtexView<CR>',{noremap=true,silent=true})
+        --     map('n','<Leader>lk',':VimtexStop<CR>',{noremap=true,silent=true})
+        -- end
+    }
 end)
 

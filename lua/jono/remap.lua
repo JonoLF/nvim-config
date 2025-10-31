@@ -74,3 +74,6 @@ vim.keymap.set("n", "<C-w>t", "<cmd>tabnew<CR>")
 vim.keymap.set({'n', 'v'}, 's', '"_s')    -- Normal and Visual modes for `s`
 vim.keymap.set('n', 'S', '"_S')           -- Normal mode for `S`
 
+vim.keymap.set('n','<Leader>lc',':VimtexCompile<CR>',{noremap=true,silent=true})
+vim.keymap.set('n','<Leader>lv',':VimtexView<CR>',{noremap=true,silent=true})
+vim.keymap.set('n','<Leader>lk',':VimtexStop<CR>',{noremap=true,silent=true})
