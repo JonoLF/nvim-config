@@ -24,10 +24,7 @@ return require('packer').startup(function(use)
     use{
         'nvim-treesitter/nvim-treesitter',
         branch = 'main',
-        run = function()
-            local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
-            ts_update()
-        end,
+        run = ':TSUpdate'
     }
     use 'nvim-tree/nvim-web-devicons'
     use {
@@ -40,10 +37,10 @@ return require('packer').startup(function(use)
             }
         }
     }
-    --use {
-    --    "nvim-telescope/telescope-file-browser.nvim",
-    --    requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
-    --}
+    use {
+       "nvim-telescope/telescope-file-browser.nvim",
+       requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" }
+    }
     use({
         "catppuccin/nvim",
         as = "catppuccin",
