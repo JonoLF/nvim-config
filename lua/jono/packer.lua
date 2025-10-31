@@ -21,14 +21,24 @@ return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
     use "nvim-lua/plenary.nvim"
-    use{
+    use {
         'nvim-treesitter/nvim-treesitter',
         branch = 'main',
-        run = ':TSUpdate'
+        run = ':TSUpdate',
+        config = function()
+            require('nvim-treesitter.configs').setup {
+                ensure_installed = { "c", "lua", "cpp", "bash", "python" },
+                sync_install = false,
+                auto_install = true,
+                highlight = { enable = true, additional_vim_regex_highlighting = false },
+                indent = { enable = false },
+            }
+        end,
     }
     use 'nvim-tree/nvim-web-devicons'
     use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.x',
+        'nvim-telescope/telescope.nvim', 
+        branch = 'master',
         requires = {
             {
                 'nvim-lua/plenary.nvim',
