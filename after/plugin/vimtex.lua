@@ -6,7 +6,7 @@ vim.g.vimtex_compiler_latexmk = {
     build_dir = '',
     options = {
         '-pdf',                  -- generate PDF
-        '-pdflatex=pdflatex -interaction=nonstopmode -synctex=1', 
+        '-pdflatex=pdflatex --shell-escape -interaction=nonstopmode -synctex=1', 
         '-file-line-error',      -- better error messages
         '-halt-on-error',        -- stop on first error
         '-verbose',              -- verbose log
