@@ -31,6 +31,7 @@ require('mason-lspconfig').setup({
         lsp_zero.default_setup,
     },
 })
+
 -- here you can setup the language servers 
 local cmp = require('cmp')
 local cmp_action = require('lsp-zero').cmp_action()
