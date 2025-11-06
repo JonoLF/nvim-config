@@ -1,8 +1,3 @@
-require("jono.remap")
-require("jono.packer")
-require("jono.set")
--- require("jono.lazy")
-
 vim.g.netrw_browse_split = 0
 vim.g.netrw_banner = 0
 vim.g.netrw_winsize = 25
@@ -26,14 +21,6 @@ vim.api.nvim_create_autocmd('User', { pattern = 'LeapLeave',
 
 vim.o.clipboard = 'unnamedplus'
 
---vim.cmd([[
---  autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
---]])
--- vim.o.autoindent = true
--- vim.o.smartindent = false
--- vim.o.cindent = false;
--- modify cindent to stop c and cpp preprocessor directives from being autoaligned to the beginning of the line
--- vim.opt.cinoptions = vim.opt.cinoptions - "p";
 vim.api.nvim_create_autocmd("BufEnter", {
   pattern = "*",
   callback = function()
@@ -42,4 +29,3 @@ vim.api.nvim_create_autocmd("BufEnter", {
     vim.opt.cindent = true
   end,
 })
-

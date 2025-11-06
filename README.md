@@ -50,7 +50,7 @@ run -b '~/.tmux/plugins/tpm/tpm'
 ```
 
 # Plugins used
-- [nvim-lspconfig](https://github.com/nvim-treesitter/nvim-treesitter-context)A
+- [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
 - [mason](https://github.com/mason-org/mason.nvim)
 - [mason-lspconfig](https://github.com/mason-org/mason-lspconfig.nvim)
 - [cmp-nvim-lsp](https://github.com/hrsh7th/cmp-nvim-lsp)
@@ -80,3 +80,4 @@ run -b '~/.tmux/plugins/tpm/tpm'
 - [mini](https://github.com/nvim-mini/mini.nvim)
 - [oil](https://github.com/stevearc/oil.nvim)
 - [vimtex](https://github.com/lervag/vimtex)
+- [todo-comments](https://github.com/folke/todo-comments.nvim)
