@@ -11,3 +11,4 @@ tags.lock
 tags.temp
 ctags
 packer_compiled.lua
+lazy-lock.json
