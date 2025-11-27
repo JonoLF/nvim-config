@@ -38,14 +38,14 @@ return {
             ["<C-d>"] = cmp.mapping.scroll_docs(4),
             ["<C-y>"] = cmp.mapping.confirm({ select = true }),
         }),
-        formatting = {
-            format = lspkind.cmp_format({
-                mode = "symbol_text",
-                maxwidth = 50,
-                ellipsis_char = "...",
-                show_labelDetails = true,
-            }),
-        },
+        -- formatting = {
+        --     format = lspkind.cmp_format({
+        --         mode = "symbol_text",
+        --         maxwidth = 50,
+        --         ellipsis_char = "...",
+        --         show_labelDetails = true,
+        --     }),
+        -- },
     })
     cmp.setup.cmdline({ '/', '?' }, {
         mapping = cmp.mapping.preset.cmdline(),
