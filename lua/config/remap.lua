@@ -69,8 +69,58 @@ vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, {buffe
 vim.keymap.set('n', 'gr', '<cmd>Telescope lsp_references<cr>', {buffer = bufnr})
 vim.keymap.set("n", "<leader>gd", function() vim.lsp.buf.definition() end, {buffer = bufnr})
 vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, {buffer = bufnr})
+
+-- telescope
 local builtin = require('telescope.builtin')
 vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+
+-- Neogit
+vim.keymap.set("n", "<C-g>", "<cmd>Neogit<CR>")
+
+-- lsp
+vim.keymap.set("n", "<leader>vws", function() vim.lsp.buf.workspace_symbol() end, {buffer = bufnr})
+vim.keymap.set("n", "<leader>vd", function() vim.diagnostic.open_float() end, {buffer = bufnr})
+vim.keymap.set("n", "[d", function() vim.diagnostic.jump() end, {buffer = bufnr})
+vim.keymap.set("n", "]d", function() vim.diagnostic.goto_prev() end, {buffer = bufnr})
+vim.keymap.set("n", "<leader>vca", function() vim.lsp.buf.code_action() end, {buffer = bufnr})
+vim.keymap.set("n", "<leader>vrr", function() vim.lsp.buf.references() end, {buffer = bufnr})
+vim.keymap.set("n", "<leader>vrn", function() vim.lsp.buf.rename() end, {buffer = bufnr})
+vim.keymap.set("i", "<C-h>", function() vim.lsp.buf.signature_help() end, {buffer = bufnr})
+vim.keymap.set('n', 'gr', '<cmd>Telescope lsp_references<cr>', {buffer = bufnr})
+vim.keymap.set("n", "<leader>gd", function() vim.lsp.buf.definition() end, {buffer = bufnr})
+vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, {buffer = bufnr})
+
+-- undotree
+vim.keymap.set("n", "<leader>u", vim.cmd.UndotreeToggle)
+
+--zenmode
+vim.keymap.set("n", "<leader>zz", function()
+    require("zen-mode").setup {
+        window = {
+            width = 120,
+            options = { }
+        },
+    }
+    require("zen-mode").toggle()
+    vim.wo.wrap = true
+    vim.wo.number = true
+    vim.wo.rnu = true
+end)
+
+
+vim.keymap.set("n", "<leader>zZ", function()
+    require("zen-mode").setup {
+        window = {
+            width = 80,
+            options = { }
+        },
+    }
+    require("zen-mode").toggle()
+    vim.wo.wrap = false
+    vim.wo.number = false
+    vim.wo.rnu = false
+    vim.opt.colorcolumn = "0"
+end)

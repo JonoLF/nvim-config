@@ -2,6 +2,6 @@ return {
     { 'nvim-telescope/telescope-fzf-native.nvim', build = 'make'},
     {
         'nvim-telescope/telescope.nvim', branch = '0.1.x',
-        dependencies = { 'nvim-lua/plenary.nvim' }
+        dependencies = {'nvim-lua/plenary.nvim'}
     }
 }

@@ -1,6 +1,3 @@
-require("config.init")
-require("config.set")
-require("config.remap")
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
@@ -28,8 +25,12 @@ vim.g.maplocalleader = "\\"
 require("lazy").setup({
     spec = {
         { import = "plugins" },
-        {"nvim-treesitter/nvim-treesitter", branch = 'main', lazy = false, build = ":TSUpdate"}
+        -- {"nvim-treesitter/nvim-treesitter", branch = 'main', lazy = false, build = ":TSUpdate"}
     },
     install = { colorscheme = { "catppuccin-mocha" } },
     checker = { enabled = true },
 })
+require("config.init")
+require("config.set")
+require("config.remap")
+require("config.autocommands")

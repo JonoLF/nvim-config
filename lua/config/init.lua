@@ -29,3 +29,7 @@ vim.api.nvim_create_autocmd("BufEnter", {
     vim.opt.cindent = true
   end,
 })
+
+vim.diagnostic.config({
+    virtual_text = true
+})
