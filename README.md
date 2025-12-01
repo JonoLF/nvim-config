@@ -7,6 +7,8 @@ gh repo clone JonoLF/nvim-config
 ```
 Setup steps:
 ```
+./lua_install.sh &&\
+./luarocks_install.sh &&\
 ./nvim_install &&\
 ./setup
 ```
