@@ -12,6 +12,8 @@ Setup steps:
 ./nvim_install &&\
 ./setup
 ```
+> TODO: add `fd` and `fzf` and `treesitter-cli` setup instructions
+
 > Note: requires the [GITHUB CLI](https://cli.github.com/)
 
 > Note: having nerdfonts installed on your system will make things look much better, I recommend FiraCode
